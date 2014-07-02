@@ -1,0 +1,6 @@
+= Clojure getting started 
+:numbered:                                                                                                                              
+:testDir: ../../src/test/clojure
+:sourceDir: ../../src/main/clojure
+  
+include::src/docs/1_basics.ad[]
