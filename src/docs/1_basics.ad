@@ -1,2 +1,60 @@
 == Types
 
+=== Scalar literals
+
+==== Strings
+
+[source, clojure]
+.String length
+----
+include::{testDir}/rabbit/typestest.clj[tags=scalar1,indent=0] 
+----
+
+[source, clojure]
+.String multiline 
+----
+include::{testDir}/rabbit/typestest.clj[tags=scalar2,indent=0] 
+----
+
+[source, clojure]
+.Characters
+----
+include::{testDir}/rabbit/typestest.clj[tags=scalar3,indent=0] 
+----
+
+==== Nil 
+
+[source, clojure]
+.Nil evaluates to false in a condition expression
+----
+include::{testDir}/rabbit/typestest.clj[tags=scalar4,indent=0] 
+----
+
+==== Keywords
+
+[source, clojure]
+.Keywords as a map key
+----
+include::{testDir}/rabbit/typestest.clj[tags=scalar5,indent=0] 
+----
+
+[source, clojure]
+.Keywords with namespaces 
+----
+include::{testDir}/rabbit/typestest.clj[tags=scalar6,indent=0] 
+----
+
+[source, clojure]
+.Numbers
+----
+include::{testDir}/rabbit/typestest.clj[tags=scalar7,indent=0] 
+----
+
+WARNING: There are a couple of coercion examples. It seems it always
+apply the coercion to the upper bound.
+
+[source, clojure]
+.Regular expressions
+----
+include::{testDir}/rabbit/typestest.clj[tags=scalar8,indent=0] 
+----
