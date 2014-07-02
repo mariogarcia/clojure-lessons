@@ -4,3 +4,8 @@
 
 (defn tell-me-length [word]
   (.length word))
+
+(defn build-new-person []
+  {:name "john" :age 24})
+
+
