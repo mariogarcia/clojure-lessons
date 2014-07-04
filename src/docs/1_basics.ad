@@ -1,4 +1,4 @@
-== Types
+== Basics 
 
 === Scalar literals
 
@@ -58,3 +58,15 @@ apply the coercion to the upper bound.
 ----
 include::{testDir}/rabbit/typestest.clj[tags=scalar8,indent=0] 
 ----
+
+=== Code blocks: "do"
+
+*_do_* executes all expressions inside in order, and returns the value returned by the last
+expression.
+
+[source, clojure]
+.do
+----
+include::{testDir}/rabbit/basicstests.clj[tags=basics1,indent=0] 
+----
+
