@@ -19,7 +19,7 @@
 ;; end::basics2[]
 
 ;; tag::basics3[]
-(def numbers (1 2 3 4))
+(def numbers '(1 2 3 4))
 ; => a list
 (def someones-name "john")
 ; => a string
@@ -40,8 +40,29 @@
       (expect (first v) => 1)
       (expect (last v) => 5)
       (expect (rest v) => [2 3 4 5])
-      (expect (nth v 2) => 2)
-      (expect (.get v 2) => 2)))
+      (expect (nth v 2) => 3)
+      (expect (.get v 2) => 3)))
 ;; end::let2[]
 
 
+;; tag::let3[]
+(def v [1 2 3 4])
+;; end::let3[]
+
+;; tag::let4[]
+(fact "Simple form of assigning values from a collection"
+    (let [x (nth v 0)
+          y (nth v 1)
+          z (nth v 2)]
+          (expect x => 1)
+          (expect y => 2)
+          (expect z => 3)))
+;; end::let4[]
+
+;; tag::let5[]
+(fact "Destructuring in order to assign values from a collection"
+    (let [[x y z] v]
+          (expect x => 1)
+          (expect y => 2)
+          (expect z => 3)))
+;; tag::let5[]
