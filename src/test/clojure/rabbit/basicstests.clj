@@ -18,21 +18,27 @@
     (expect (instance? clojure.lang.PersistentHashSet #{1 2 3}) => true))
 ;; end::basics2[]
 
-;; tag::basics3[]
+;; tag::basics3a[]
 (def numbers '(1 2 3 4))
-; => a list
+;; => a list
+;; end::basics3a[]
+
+;; tag::basics3b[]
 (def someones-name "john")
-; => a string
+;; => a string
+;; end::basics3b[]
+
+;; tag::basics3c[]
 (def pi 3.14)
-; => a decimal
-;; end::basics3[]
+;; => a decimal
+;; end::basics3c[]
 
 ;; tag::let1[]
 (fact "Local bindings: let"
     (let [x 10
           y 20]
       (expect (+ x y) => 30)))
-;; end::let1]
+;; end::let1[]
 
 ;; tag::let2[]
 (fact "Destructuring let"
@@ -65,4 +71,4 @@
           (expect x => 1)
           (expect y => 2)
           (expect z => 3)))
-;; tag::let5[]
+;; end::let5[]

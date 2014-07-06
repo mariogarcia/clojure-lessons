@@ -70,3 +70,83 @@ expression.
 include::{testDir}/rabbit/basicstests.clj[tags=basics1,indent=0] 
 ----
 
+=== Collections
+
+Clojure has its own set of collections. Most of the data structures (if not all) are persistent data
+structures.
+
+[, Wikipedia]
+""
+... a persistent data structure is a data structure that always preserves the previous version of itself
+when it is modified. Such data structures are efectively immutable, as their operations do not (visibly) 
+update the structure in-place, but instead always yield a new updated structure.
+""
+[source, clojure]
+.collections
+----
+include::{testDir}/rabbit/basicstests.clj[tags=basics2,indent=0] 
+----
+
+=== Defining vars: def
+
+[source, clojure]
+.Defining different types
+----
+include::{testDir}/rabbit/basicstests.clj[tags=basics3a,indent=0] 
+----
+
+[source, clojure]
+.Defining different types
+----
+include::{testDir}/rabbit/basicstests.clj[tags=basics3b,indent=0] 
+----
+
+[source, clojure]
+.Defining different types
+----
+include::{testDir}/rabbit/basicstests.clj[tags=basics3c,indent=0] 
+----
+
+=== Local bindings: let 
+
+*_let_* make possible to define local variables or variables bound to
+the surrounding lexical scope.
+
+[source, clojure]
+.Let
+----
+include::{testDir}/rabbit/basicstests.clj[tags=let1,indent=0] 
+----
+
+[source, clojure]
+.Destructuring with let
+----
+include::{testDir}/rabbit/basicstests.clj[tags=let2,indent=0] 
+----
+
+Lets say we had a list of numbers:
+
+[source, clojure]
+.Destructuring with let 2a
+----
+include::{testDir}/rabbit/basicstests.clj[tags=let3,indent=0] 
+----
+
+And we want to assign certain values from the list to some variables
+*_x, y_* and *_z_*:
+
+[source, clojure]
+.Destructuring with let 2b
+----
+include::{testDir}/rabbit/basicstests.clj[tags=let4,indent=0] 
+----
+
+Destructuring allows us to assign variables using certain *_conventions_* or *_pattern matching_*. In
+this particular case we are assigning the values to the variables following declaration order.
+
+[source, clojure]
+.Destructuring with let 2c
+----
+include::{testDir}/rabbit/basicstests.clj[tags=let5,indent=0] 
+----
+
