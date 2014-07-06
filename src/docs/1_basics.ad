@@ -169,3 +169,19 @@ include::{testDir}/rabbit/basicstests.clj[tags=fn2,indent=0]
 ----
 include::{testDir}/rabbit/basicstests.clj[tags=fn3,indent=0] 
 ----
+
+[source, clojure]
+.Using function literals
+----
+include::{testDir}/rabbit/basicstests.clj[tags=fn4,indent=0] 
+----
+
+WARNING: Function literals can't be nested
+
+=== Conditionals: if
+
+[source, clojure]
+.Using if
+----
+include::{testDir}/rabbit/basicstests.clj[tags=conditionals1,indent=0] 
+----

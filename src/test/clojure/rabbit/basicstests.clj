@@ -90,3 +90,20 @@
 (fact "Greetings must only use first family name"
     (expect (greetings "john" "sinkup" "fogerty") => "Hola: john sinkup"))
 ;; end::fn3[]
+
+;; tag::fn4[]
+(fact "Using function literals using variable positions"
+  (let [my-function #(+ %1 %2)]
+    (expect (my-function 1 2) => 3)))
+;; end::fn4[]
+
+;; tag::conditionals1[]
+(fact "Using if"
+    (let [x 10
+          y 15
+          z (+ x y)]
+      (let [w
+            (if (= z 25) true false)]
+        (expect w => true))))
+;; end::conditionals1[]
+
