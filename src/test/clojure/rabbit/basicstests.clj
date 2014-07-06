@@ -107,3 +107,40 @@
         (expect w => true))))
 ;; end::conditionals1[]
 
+;; tag::loop_and_recursion[]
+(defn recursion-sample[x]
+    (if (neg? x)
+     x
+    (recur (dec x))))
+
+(fact "looping through a collection"
+    (expect (recursion-sample 10) => -1))
+;; end::loop_and_recursion[]
+
+;; tag::java_interop[]
+(fact "Using java interop"
+    (let [x (Integer. 5)]
+      (expect (+ x 5) => 10)
+      (expect (.toString x) => "5")
+      (expect (Math/pow x 2) => 25.0)))
+;; end::java_interop[]
+
+
+;; tag::try_catch[]
+(defn throwing-exception []
+  (throw (Exception. "Ahhhh!!!")))
+
+(defn catching-exceptions[]
+  (try
+    (throwing-exception)
+    (catch Exception ex
+      42)
+    (finally
+      (println "this is always printed no matter what"))))
+
+(fact "Throwing exceptions and capturing them"
+    (expect (catching-exceptions) => 42))
+;; end::try_catch[]
+
+
+

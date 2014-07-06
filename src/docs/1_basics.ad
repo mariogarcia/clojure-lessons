@@ -185,3 +185,27 @@ WARNING: Function literals can't be nested
 ----
 include::{testDir}/rabbit/basicstests.clj[tags=conditionals1,indent=0] 
 ----
+
+=== Recursion
+
+[source, clojure]
+.Using recur
+----
+include::{testDir}/rabbit/basicstests.clj[tags=loop_and_recursion,indent=0] 
+----
+
+=== Java interop
+
+[source, clojure]
+.Instantiation and method invocation
+----
+include::{testDir}/rabbit/basicstests.clj[tags=java_interop,indent=0] 
+----
+
+=== Try-catch
+
+[source, clojure]
+.Try catch
+----
+include::{testDir}/rabbit/basicstests.clj[tags=try_catch,indent=0] 
+----
