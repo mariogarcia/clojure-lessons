@@ -150,3 +150,22 @@ this particular case we are assigning the values to the variables following decl
 include::{testDir}/rabbit/basicstests.clj[tags=let5,indent=0] 
 ----
 
+=== Functions
+
+[source, clojure]
+.Anonymous functions
+----
+include::{testDir}/rabbit/basicstests.clj[tags=fn1,indent=0] 
+----
+
+[source, clojure]
+.Function declaration
+----
+include::{testDir}/rabbit/basicstests.clj[tags=fn2,indent=0] 
+----
+
+[source, clojure]
+.Variadic functions
+----
+include::{testDir}/rabbit/basicstests.clj[tags=fn3,indent=0] 
+----

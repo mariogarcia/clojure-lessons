@@ -72,3 +72,21 @@
           (expect y => 2)
           (expect z => 3)))
 ;; end::let5[]
+
+;; tag::fn1[]
+(fn [name]
+  (str "Hola: " name))
+;; end::fn1[]
+
+;; tag::fn2[]
+(defn greetings [name]
+  (str "Hola: " name))
+;; end::fn2[]
+
+;; tag::fn3[]
+(defn greetings [name & family-names]
+  (str "Hola: " name " " (first family-names)))
+
+(fact "Greetings must only use first family name"
+    (expect (greetings "john" "sinkup" "fogerty") => "Hola: john sinkup"))
+;; end::fn3[]
